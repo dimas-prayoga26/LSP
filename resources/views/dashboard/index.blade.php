@@ -1,0 +1,11 @@
+@extends('layouts.app.main')
+@section('title','Dashboard')
+@section('content')
+    @can('admin')
+        @include('dashboard.dashboardAdmin')
+    @elsecan('asesi')
+        @include('dashboard.dashboardAsesi')
+    @elsecan('asesor')
+        @include('dashboard.dashboardAsesor')
+    @endcan
+@endsection
